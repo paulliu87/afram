@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.0entity</title>
+</head>
+	<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+		<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		<a-marker-camera preset='hiro'></a-marker-camera> -->
+		<a-marker type='pattern' url='https://rawgit.com/jeromeetienne/ar.js/master/data/data/patt.hiro'>
+
+			<!-- define the object which gonna appears on this marker  -->
+			<a-box depth="2" height="1" width="1" position='0 0 0' material='opacity: 0.5; side:double'></a-box>
+			<a-entity geometry="primitive: torusKnot; radius: 0.3; radiusTubular: 0.05" position='0 0 0.5'>
+				<a-animation attribute="rotation" from="0 0 0" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+			</a-entity>
+
+
+		</a-marker>
+	</a-scene>
+
+
+</body>
+</html>

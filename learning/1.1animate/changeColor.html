@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.0entity</title>
+	<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+	<script src="https://rawgit.com/jeromeetienne/ar.js/master/aframe/build/aframe-ar.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="changeColor.js"></script>
+</head>
+	<!-- this will give a box -->
+<!-- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+		<a-marker type='pattern' url='https://rawgit.com/jeromeetienne/ar.js/master/data/data/patt.hiro'>
+
+			<a-box color="red" depth="0.5" height="0.5" shader="flat" width="1"></a-box>
+		</a-marker>
+	</a-scene>
+	<div style='position: fixed; bottom: 30px; width:inherit; text-align: center; z-index: 1;'>
+	
+		<button type="button" id="button">Click Me!</button>	
+	</div>
+
+</body>
+</html>
